@@ -2,7 +2,7 @@ import os
 import sys
 import logging
 import logging.config
-# import re
+import re
 
 
 ################################################################################
@@ -62,6 +62,7 @@ class BiTool(object):
         else:
             pass
 
+    # 检查模板表依赖
     def check_dependency(self,table_list=None):
         check_failed_list = []
 
@@ -83,7 +84,7 @@ class BiTool(object):
         else:
             return False
 
-
+    # 工作流
     def pipeline(self):
         pass
 
@@ -115,10 +116,11 @@ class BiTool(object):
 
         self.__zip_output_dir()
 
-
+    # 清理
     def clear(self):
         pass
 
+    # 关闭
     def close(self):
         pass
 
